@@ -1,0 +1,21 @@
+{
+  "name": "basikonapp",
+  "version": "1.0.0",
+  "description": "app to basikon interview",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon backend/server.js"
+  },
+  "author": "Eduardo Miliani Capelini",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.14.2",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
