@@ -8,7 +8,7 @@ const app = express();
 dotenv.config();
 
 // Variables d'ambiance
-const PORT = process.env.PORT || 7000;
+const PORT = process.env.PORT;
 const MONGOURL = process.env.MONGO_URL;
 
 // Connexion avec MongoDB

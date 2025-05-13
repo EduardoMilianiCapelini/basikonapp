@@ -9,6 +9,7 @@ async function chargeDonnees() {
       const users = await resUsers.json();
       const resSum = await fetch('http://localhost:8000/sumAges');
       const sumAges = await resSum.json();
+      console.log(sumAges);
 
       // Création de cards
       users.forEach(user => {
