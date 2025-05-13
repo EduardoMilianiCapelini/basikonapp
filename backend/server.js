@@ -24,15 +24,14 @@ mongoose.connect(MONGOURL).then(() => {
 // Permet l'affichage de frontend/index.html on GET /
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, 'frontend')));
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
+  });
 
 // Permet l'envoie de json on POST /users
 app.use(express.json());
 
 // API endpoints
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'frontend', 'index.html'));
-  });
-
 app.get("/users", async (req, res) => {
     try {
         const userData = await UserModel.find();
